@@ -1,0 +1,14 @@
+package segundaevaluacion;
+
+public class primerTestObjetos {
+
+    public static void main(String[] args) {
+
+        String p1 = new String("iván");
+        String p2 = "Sergio";
+
+        System.out.println(p2.length());
+
+    }
+
+}
