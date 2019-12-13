@@ -1,0 +1,36 @@
+package segundaevaluacion;
+
+import java.util.Scanner;
+
+public class Integer_Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Integer_Clase int1 = new Integer_Clase(sc.nextInt());
+        Integer_Clase int2 = new Integer_Clase(sc.nextInt());
+        Integer_Clase int3 = new Integer_Clase(int1.getN() + int2.getN());
+
+        System.out.println(int3.getN());
+        
+        // SUMA1
+        Integer_Clase int4 = int1.suma1(int1, int2);
+        
+        System.out.println(int4.getN());
+        
+        // SUMA2
+        int4.suma2(int3, int4);
+        
+        System.out.println(int4.getSuma());
+        
+        Integer_Clase int5 = new Integer_Clase(0);
+        System.out.println(int5.getSuma());
+        
+        System.out.println(int5.toString());
+
+    }
+
+    
+
+}
