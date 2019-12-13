@@ -1,0 +1,30 @@
+
+package segundaevaluacion;
+
+public class CuentaCorrienteMain {
+    public static void main(String[] args) {
+        
+        
+        //Constructor sin entrada, saldo = 0 por defecto
+        CuentaCorriente a = new CuentaCorriente(); 
+        
+        System.out.println("El saldo inicial de la cuenta a es " + a.getSaldo());
+        
+        //Constructor con entrada, saldo = a int de entrada
+        CuentaCorriente b = new CuentaCorriente(4.0); 
+        
+        System.out.println("El saldo inicial de la cuenta b es : " + b.getSaldo());
+        
+        //Método ingreso, añade la entrada al saldo de la cuenta
+        a.ingreso(3.2);
+        
+        System.out.println("Tras meter 3, el saldo de a es: " + a.getSaldo());
+        
+        //Método reintegro, extrae la entrada al saldo de la cuenta 
+        b.reintegro(2.7);
+        
+        System.out.println("Tras extraer 2, el saldo de b es : " + b.getSaldo());
+        
+    }
+
+}
