@@ -1,0 +1,20 @@
+package segundaevaluacion;
+
+public class SegundoTestObjetos {
+
+    public static void main(String[] args) {
+
+        int a = 5;
+        int b = 5;
+        int suma;
+        SegundoTestObjetos myObj = new SegundoTestObjetos();
+        suma = myObj.suma(a, b);
+        System.out.println(suma);
+    }
+
+    public int suma(int entrada1, int entrada2) {
+        int suma = entrada1 + entrada2;
+        return suma;
+    }
+
+}
