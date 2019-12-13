@@ -1,0 +1,41 @@
+package segundaevaluacion;
+
+public class Integer_Clase {
+
+    private int n;
+    private int suma =0;
+
+    public Integer_Clase(int n_e) {
+        this.n = n_e;
+    }
+
+    public int getN() {
+        return n;
+    }
+    
+    public int getSuma() {
+        return suma;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+    
+    public Integer_Clase suma1 (Integer_Clase obj1, Integer_Clase obj2){
+        
+        int suma; 
+        suma = obj1.getN() + obj2.getN();
+        Integer_Clase result = new Integer_Clase(suma);         
+                
+        return result; 
+    }
+    
+    public void suma2 (Integer_Clase obj3, Integer_Clase obj4){
+                
+        this.suma = obj3.getN() + obj4.getN();
+               
+    }
+    
+    
+
+}
