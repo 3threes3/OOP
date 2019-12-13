@@ -1,0 +1,36 @@
+
+package segundaevaluacion;
+
+public class CuentaCorriente {
+    
+    private double saldo; 
+    
+    public CuentaCorriente(){
+        
+        this.saldo = 0.0; 
+        
+    }
+    
+    public CuentaCorriente(double saldo_e){
+        
+        this.saldo = saldo_e; 
+        
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+    
+    public void ingreso (double money_in){
+        this.saldo = this.saldo + money_in; 
+    }
+    
+    public void reintegro (double money_out){
+        this.saldo = this.saldo - money_out; 
+    }
+    
+}
