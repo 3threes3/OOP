@@ -1,0 +1,23 @@
+package segundaevaluacion;
+
+public class Parking {
+
+    public static void main(String[] args) {
+
+        Coche coche1 = new Coche("verde", true, 'C');
+        Coche coche2 = new Coche("azul", false, 'A');
+
+        coche1.imprimirTodo();
+        coche2.imprimirTodo();
+
+        System.out.println(coche1.imprimirTodo());
+
+        coche1.cambiarColor("negro");
+
+        System.out.println(coche1.imprimirTodo());
+
+        Math.sqrt(2323);
+
+    }
+
+}
