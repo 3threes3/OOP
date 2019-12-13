@@ -1,0 +1,48 @@
+package segundaevaluacion;
+
+public class Coche {
+
+    // Atributos
+    int ruedas = 4;
+    String color;
+    boolean airbagPasajero;
+    char etiquetaAmbiental;
+
+    // Constructor
+    public Coche(String color, boolean airbag, char etiqueta) {
+        this.color = color;
+        this.airbagPasajero = airbag;
+        this.etiquetaAmbiental = etiqueta;
+    }
+
+    // Métodos
+    public void existencialismo() {
+        System.out.println("Soy un coche");
+    }
+
+    public String imprimirTodo() {
+
+        String todo;
+        todo = this.ruedas + "," + this.color + " " + this.airbagPasajero + " " + this.etiquetaAmbiental;
+
+        return todo;
+    }
+
+    public String devolverColor() {
+
+        return this.color;
+    }
+
+    public void cambiarColor(String nuevocolor) {
+        this.color = nuevocolor;
+    }
+
+    public char getEtiquetaAmbiental() {
+        return etiquetaAmbiental;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+}
