@@ -1,0 +1,51 @@
+package segundaevaluacion;
+
+import java.util.Scanner;
+
+public class EJ04ViajeMain {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        double distanceKeyboard;
+        double timeKeyboard;
+
+        System.out.println("Introduce los datos del viaje 1:");
+        System.out.println("---------------------------------");
+        System.out.println("distancia 1 (en km) :");
+        distanceKeyboard = sc.nextDouble();
+        System.out.println("tiempo 1 (en horas)");
+        timeKeyboard = sc.nextDouble();
+
+        EJ04Viaje a1 = new EJ04Viaje(distanceKeyboard, timeKeyboard);
+
+        System.out.println("Introduce los datos del viaje 2:");
+        System.out.println("---------------------------------");
+        System.out.println("distancia 2 (en km) :");
+        distanceKeyboard = sc.nextDouble();
+        System.out.println("tiempo 2 (en horas)");
+        timeKeyboard = sc.nextDouble();
+
+        EJ04Viaje a2 = new EJ04Viaje(distanceKeyboard, timeKeyboard);
+
+        System.out.println("VIAJE MÁS RÁPIDO USANDO ATRIBUTOS DE LA CLASE");
+        System.out.println("----------------------------------------------");
+
+        if (a1.speed > a2.speed) {
+            System.out.println("El viaje más rápido es V1 con " + a1.speed + "km/h " + a1.distance + "km en " + a1.time + " horas");
+        } else {
+            System.out.println("El viaje más rápido es V2 con " + a2.speed + "km/h " + a2.distance + "km en " + a2.time + " horas");
+        }
+
+        System.out.println("VIAJE MÁS RÁPIDO USANDO MÉTODO CALCULAR VELOCIDAD");
+        System.out.println("-------------------------------------------------");
+
+        if (a1.calcularVelocidad() > a2.calcularVelocidad()) {
+            System.out.println("El viaje más rápido es V1 con " + a1.speed + "km/h " + a1.distance + "km en " + a1.time + " horas");
+        } else {
+            System.out.println("El viaje más rápido es V2 con " + a2.speed + "km/h " + a2.distance + "km en " + a2.time + " horas");
+        }
+    }
+
+}
