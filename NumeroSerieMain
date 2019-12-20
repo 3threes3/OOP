@@ -1,0 +1,14 @@
+package segundaevaluacion;
+
+public class NumeroSerieMain {
+
+    public static void main(String[] args) {
+
+        NumeroSerie a = new NumeroSerie();
+        System.out.println(a.getMatricula());
+        NumeroSerie b = new NumeroSerie();
+        System.out.println(b.getMatricula());
+
+    }
+
+}
