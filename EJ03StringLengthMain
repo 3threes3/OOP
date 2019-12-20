@@ -1,0 +1,16 @@
+package segundaevaluacion;
+
+public class EJ03StringLengthMain {
+
+    public static void main(String[] args) {
+
+        EJ03StringLength a = new EJ03StringLength();
+        a.wordSize();
+        System.out.println("El tamaño total es " + EJ03StringLength.getAcum());
+        EJ03StringLength b = new EJ03StringLength("test");
+        b.wordSize();
+        System.out.println("El tamaño total es " + EJ03StringLength.getAcum());
+
+    }
+
+}
