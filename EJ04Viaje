@@ -1,0 +1,54 @@
+package segundaevaluacion;
+
+public class EJ04Viaje {
+
+    double distance;
+    double time;
+    double speed;
+
+    EJ04Viaje() {
+    }
+
+    ;
+
+    EJ04Viaje(double distance_in, double time_in) {
+
+        this.distance = distance_in;
+        this.time = time_in;
+        this.speed = distance_in / time_in;
+
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public double getTime() {
+        return time;
+    }
+
+    public void setTime(double time) {
+        this.time = time;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    public double calcularVelocidad() {
+
+        double velocidadSalida;
+        velocidadSalida = this.distance / this.time;
+        return velocidadSalida;
+
+    }
+
+}
