@@ -1,0 +1,39 @@
+package segundaevaluacion;
+
+public class EJ03StringLength {
+
+    public static int acum = 0;
+    public String word;
+
+    public EJ03StringLength() {
+        this.word = "default";
+        acum = acum + word.length();
+    }
+
+    public EJ03StringLength(String word_e) {
+        this.word = word_e;
+        acum = acum + word.length();
+    }
+
+    public void wordSize() {
+        int size = this.word.length();
+        System.out.println("El tamaño de esta palabra es " + size);
+    }
+
+    public static void setAcum(int acum) {
+        EJ03StringLength.acum = acum;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
+
+    public static int getAcum() {
+        return acum;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+}
