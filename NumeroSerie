@@ -1,0 +1,22 @@
+package segundaevaluacion;
+
+public class NumeroSerie {
+
+    public static int matricula = -1;
+
+    public NumeroSerie() {
+        modMatricula();
+    }
+
+    public static void modMatricula() {
+        matricula = matricula + 1;
+    }
+
+    public static void setMatricula(int matricula) {
+        NumeroSerie.matricula = matricula;
+    }
+
+    public static int getMatricula() {
+        return matricula;
+    }
+}
