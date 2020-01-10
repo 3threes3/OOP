@@ -1,0 +1,103 @@
+
+package segundaevaluacion;
+
+
+public class EJ005Hora {
+    
+    private int hours; 
+    private int minutes; 
+    private int seconds; 
+    private int days = 0; 
+
+    
+    public EJ005Hora (int hour_in, int minute_in, int seconds_in){
+        this.hours = hour_in; 
+        this.minutes = minute_in; 
+        this.seconds = seconds_in; 
+        comprobar ();
+    }
+    
+    public EJ005Hora (){
+        this.hours = 0; 
+        this.minutes = 0; 
+        this.seconds = 0; 
+        comprobar ( );
+        
+    }
+    
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+         comprobar ( );
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+         comprobar ( );
+    }
+
+    public int getSeconds() {
+        return seconds;
+    }
+
+    public void setSeconds(int seconds) {
+        this.seconds = seconds;
+         comprobar ( );
+    }
+
+    public int getDays() {
+        return days;
+    }
+
+    public void setDays(int days) {
+        this.days = days;
+         comprobar ( );
+    }    
+    
+    public void sumar (EJ005Hora time_in){
+        int totalseconds; 
+        totalseconds = (time_in.days * 86400) + (time_in.hours * 3600) + (time_in.minutes * 60) + (time_in.seconds);
+        System.out.println("El total de segundos es de " + totalseconds);
+        comprobar ( );
+    }
+    
+    private void comprobar ( ){
+        if(this.hours > 23){
+           System.out.println("Error al introducir las horas, se han añadido " + (this.hours/24) + " al total de días."); 
+           this.days = this.days + (this.hours/24);
+           this.hours = this.hours - ((this.hours/24)*24); 
+        }        
+        if(this.minutes > 59){
+           System.out.println("Error al introducir los minutos, se han añadido " + (this.minutes/60) + " al total de horas.");            
+           this.hours = this.hours + (this.minutes/60);
+           this.minutes = this.minutes - ((this.minutes/60)*60);
+           if(this.hours > 23){
+                System.out.println("Error al introducir las horas, se han añadido " + (this.hours/24) + " al total de días."); 
+                this.days = this.days + (this.hours/24);
+                this.hours = this.hours - ((this.hours/24)*24); 
+            }   
+        }
+        if(this.seconds > 59){
+           System.out.println("Error al introducir los segundos, se han añadido " + (this.seconds/60) + " al total de minutos.");            
+           this.minutes = this.minutes + (this.seconds/60);
+           this.seconds = this.seconds - ((this.seconds/60)*60); 
+           if(this.minutes > 59){
+                System.out.println("Error al introducir los minutos, se han añadido " + (this.minutes/60) + " al total de horas.");            
+                this.hours = this.hours + (this.minutes/60);
+                this.minutes = this.minutes - ((this.minutes/60)*60);
+                if(this.hours > 23){
+                    System.out.println("Error al introducir las horas, se han añadido " + (this.hours/24) + " al total de días."); 
+                    this.days = this.days + (this.hours/24);
+                    this.hours = this.hours - ((this.hours/24)*24); 
+                } 
+           }
+        }        
+    }
+}
