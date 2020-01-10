@@ -1,0 +1,29 @@
+
+package segundaevaluacion;
+import java.util.Scanner; 
+
+public class EJ005Main {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner (System.in);
+        
+        EJ005Hora time1 = new EJ005Hora();
+        
+        System.out.println("INTRODUCE LA HORA, MINUTOS Y SEGUNDOS");
+        System.out.println("-------------------------------------");
+        System.out.println("HORA    :");
+        time1.setHours(sc.nextInt());
+        System.out.println("MINUTOS    :");
+        time1.setMinutes(sc.nextInt());
+        System.out.println("SEGUNDOS    :");
+        time1.setSeconds(sc.nextInt());
+        
+        time1.sumar(time1);
+
+        System.out.println(time1.getDays() + " días y " + time1.getHours() + ":" + time1.getMinutes() + ":" + time1.getSeconds());
+//        System.out.println(time2.getDays() + " días y " + time2.getHours() + ":" + time2.getMinutes() + ":" + time2.getSeconds());   
+//        System.out.println(time3.getDays() + " días y " + time3.getHours() + ":" + time3.getMinutes() + ":" + time3.getSeconds());
+//        System.out.println(time4.getDays() + " días y " + time4.getHours() + ":" + time4.getMinutes() + ":" + time4.getSeconds());        
+    }
+
+}
