@@ -1,0 +1,15 @@
+
+package segundaevaluacion;
+
+public class EJ006PartidoMain {
+    public static void main(String[] args) {
+        
+        EJ006Partido match1 = new EJ006Partido (8, 2, "Hola", "Adiós");
+        EJ006Partido match2 = new EJ006Partido (3, 2, "Hola", "Adiós");
+                
+        boolean test = match1.haymasgoles(match2);
+        System.out.println(test);
+        
+    }
+
+}
