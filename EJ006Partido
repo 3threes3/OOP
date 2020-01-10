@@ -1,0 +1,79 @@
+
+package segundaevaluacion;
+
+public class EJ006Partido {
+    
+    private int team1goals;
+    private int team2goals; 
+    String team1name; 
+    String team2name; 
+    
+    public EJ006Partido (int team1goals_in, int team2goals_in, String team1name_in, String team2name_in){
+        this.team1goals = team1goals_in; 
+        this.team2goals = team2goals_in; 
+        this.team1name = team1name_in; 
+        this.team2name = team2name_in; 
+    }
+
+    public int getTeam1goals() {
+        return team1goals;
+    }
+
+    public void setTeam1goals(int team1goals) {
+        this.team1goals = team1goals;
+    }
+
+    public int getTeam2goals() {
+        return team2goals;
+    }
+
+    public void setTeam2goals(int team2goals) {
+        this.team2goals = team2goals;
+    }
+
+    public String getTeam1name() {
+        return team1name;
+    }
+
+    public void setTeam1name(String team1name) {
+        this.team1name = team1name;
+    }
+
+    public String getTeam2name() {
+        return team2name;
+    }
+
+    public void setTeam2name(String team2name) {
+        this.team2name = team2name;
+    }
+    
+    public static int diference (EJ006Partido match1, EJ006Partido match2){
+        int goaldif; 
+        if(match1.team1goals>=match2.team2goals){
+            goaldif = match1.team1goals - match2.team2goals;
+        }else {
+            goaldif = match2.team2goals - match1.team1goals;
+        }
+        return goaldif; 
+    }
+    
+    public int goalTotal (){
+        int total = this.team1goals + this.team2goals;
+        System.out.println("El total de goles en el partido es de " + total);
+        return (total);
+    }
+    
+    public boolean haymasgoles (EJ006Partido partido_e){
+        boolean resulutado = true;
+        
+        if (this.goalTotal() > partido_e.goalTotal()){
+            resulutado = true;
+        }else{
+            resulutado = false;
+        }
+        
+        return resulutado;
+    }
+    
+     
+}
