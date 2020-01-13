@@ -1,0 +1,9 @@
+package segundaevaluacion;
+
+public class EJ008Alumno {
+    
+    private String name; 
+    private EJ008Asignatura a1;
+    private EJ008Asignatura a2;
+
+}
