@@ -1,0 +1,92 @@
+package segundaevaluacion;
+
+import java.util.Scanner;
+
+public class EJ013Persona {
+
+    Scanner sc = new Scanner(System.in);
+
+    private String dni;
+    private String name;
+    private String lastname;
+    private int age;
+    private String nationality;
+
+    public EJ013Persona() {
+
+        System.out.print("DNI del autor: ");
+        this.dni = sc.next();
+        System.out.print("Nombre del autor: ");
+        this.name = sc.next();
+        System.out.print("Apellidos del autor: ");
+        this.lastname = sc.next();
+        System.out.print("Edad del autor: ");
+        this.age = sc.nextInt();
+        System.out.print("Nacionalidad del autor: ");
+        this.nationality = sc.next();
+    }
+
+    public EJ013Persona(String dni_in, String name_in, String lastname_in, int age_in, String nationality_in) {
+        this.dni = dni_in;
+        this.name = name_in;
+        this.lastname = lastname_in;
+        this.age = age_in;
+        this.nationality = nationality_in;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public boolean equals(EJ013Persona p_in) {
+        boolean equalcheck;
+        if (this.dni == p_in.dni && this.name == p_in.name && this.lastname == p_in.lastname && this.age == p_in.age && this.nationality == p_in.nationality) {
+            //this.dni.equals(p_in.dni) &&
+            equalcheck = true;
+        } else {
+            equalcheck = false;
+        }
+        return equalcheck;
+    }
+
+    @Override
+    public String toString() {
+        return "DNI " + dni + " NOMBRE " + name + " APELLIDOS " + lastname + " EDAD " + age + " NACIONALIDAD " + nationality;
+    }
+}
