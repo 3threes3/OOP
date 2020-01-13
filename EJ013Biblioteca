@@ -1,0 +1,67 @@
+package segundaevaluacion;
+
+public class EJ013Biblioteca {
+
+    private static int n = 10;
+    private EJ013Libro[] collection;
+    private int booknum;
+
+    public EJ013Biblioteca() {
+
+        EJ013Persona author1 = new EJ013Persona("11111111A", "Perico", "Palotes", 33, "Espanol");
+
+        EJ013Libro book1 = new EJ013Libro(1000000001, "El primero", author1, 234);
+        System.out.println("ccccccccccccccccccc");
+        EJ013Libro book2 = new EJ013Libro(1000000002, "El segundo", author1, 123);
+        EJ013Libro book3 = new EJ013Libro(1000000003, "El tercero", author1, 124);
+        EJ013Libro book4 = new EJ013Libro(1000000004, "El cuarto", author1, 15);
+        EJ013Libro book5 = new EJ013Libro(1000000005, "El quinto", author1, 153);
+        EJ013Libro book6 = new EJ013Libro(1000000006, "El sexto", author1, 12);
+        EJ013Libro book7 = new EJ013Libro(1000000007, "El septimo", author1, 545);
+        EJ013Libro book8 = new EJ013Libro(1000000008, "El octavo", author1, 1010);
+        EJ013Libro book9 = new EJ013Libro(1000000009, "El noveno", author1, 888);
+        EJ013Libro book10 = new EJ013Libro(1000000010, "El decimo", author1, 33);
+        this.collection = new EJ013Libro[]{book1, book2, book3, book4, book5, book6, book7, book8, book9, book10};
+
+    }
+
+    public EJ013Biblioteca(EJ013Libro[] book_in, int collectionsize) {
+        this.collection = book_in;
+        this.booknum = collectionsize;
+    }
+
+    public static int getN() {
+        return n;
+    }
+
+    public static void setN(int n) {
+        EJ013Biblioteca.n = n;
+    }
+
+    public EJ013Libro[] getCollection() {
+        return collection;
+    }
+
+    public void setCollection(EJ013Libro[] collection) {
+        this.collection = collection;
+    }
+
+    public int getBooknum() {
+        return booknum;
+    }
+
+    public void setBooknum(int booknum) {
+        this.booknum = booknum;
+    }
+
+    public void booklist() {
+        System.out.println("---------------------------");
+        for (int i = 0; i < collection.length; i++) {
+            if (collection[i] != null) {
+                System.out.println(collection[i].getTitle() + " by " + collection[i].getAuthor().getName() + " " + collection[i].getAuthor().getLastname());
+            }
+        }
+        System.out.println("---------------------------");
+    }
+
+}
