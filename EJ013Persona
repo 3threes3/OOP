@@ -1,0 +1,82 @@
+package segundaevaluacion;
+
+import java.util.Objects;
+import java.util.Scanner;
+
+public class EJ013Libro {
+
+    Scanner sc = new Scanner(System.in);
+
+    private long isbn;
+    private String title;
+    private EJ013Persona author;
+    private int pages;
+
+    public EJ013Libro(int N) {
+        System.out.println("ISBN del libro?");
+        this.isbn = sc.nextLong();
+        System.out.println("Título del libro?");
+        this.title = sc.next();
+        EJ013Persona a = new EJ013Persona();
+        this.author = a;
+        System.out.println("Páginas del libro?");
+        this.pages = sc.nextInt();
+    }
+
+    public EJ013Libro(long isbn_in, String title_in, EJ013Persona author_in, int pages_in) {
+        this.isbn = isbn_in;
+        this.title = title_in;
+        //EJ013Persona a = new EJ013Persona();
+        this.author = author_in;
+        this.pages = pages_in;
+    }
+
+    public long getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(long isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public EJ013Persona getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(EJ013Persona author) {
+        this.author = author;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public boolean equals(EJ013Libro book_in) {
+        boolean equalcheck;
+
+        if (this.isbn == book_in.isbn && this.title == book_in.title && this.author.equals(book_in.getAuthor()) && this.pages == book_in.pages) {
+            equalcheck = true;
+        } else {
+            equalcheck = false;
+        }
+        return equalcheck;
+    }
+
+    @Override
+    public String toString() {
+        return ("ISBN" + isbn + " TITULO " + title + " AUTOR " + author.getName() + " " + author.getLastname() + " Numero de paginas " + pages);
+    }
+
+}
