@@ -1,0 +1,59 @@
+package segundaevaluacion;
+
+public class EJ007Puntos {
+    
+    private int  x;
+    private int y;
+    private EJ007Puntos saved; 
+    
+    public EJ007Puntos (int x_in, int y_in){        
+        this.x = x_in; 
+        this.y = y_in;           
+    }
+    
+    public EJ007Puntos (){
+        this.x = 100;
+        this.y = 0;
+    }
+    
+    public EJ007Puntos (EJ007Puntos saved_in){
+        this.saved = saved_in;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public EJ007Puntos getSaved() {
+        return saved;
+    }
+
+    public void setSaved(EJ007Puntos saved) {
+        this.saved = saved;
+    }
+    
+    public static boolean equals (EJ007Puntos saved1, EJ007Puntos saved2){
+        boolean checkEquals; 
+        checkEquals = saved1.x == saved2.x && saved1.y == saved2.y;
+        return checkEquals;
+    }
+    
+    public static boolean equals3 (EJ007Puntos saved1, EJ007Puntos saved2, EJ007Puntos saved3){
+        boolean checkEquals; 
+        checkEquals = saved1.x == saved2.x && saved1.x == saved3.x && saved1.y == saved2.y && saved1.y == saved3.y;
+        return checkEquals;        
+    }
+    
+}
